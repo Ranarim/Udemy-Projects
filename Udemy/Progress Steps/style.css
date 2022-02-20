@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+ * {
+   box-sizing:border-box;  /* Wenn wir das Padding ändern, wird die Breite nicht geänder*/
+}
+body {
+   font-family: 'Roboto';
+   display: flex; /*Damit wird alles in einer Reihe geordnet*/
+   align-items: center; /*Damit werden alle in der Mitte angeordnet*/
+   justify-content: center; 
+   height: 100vh; /* Damit  bezieht sich das justify content nicht nur auf die Horizontale*/
+   overflow: hidden;
+   margin: 0;
+}
+
+:root {
+    --line-border-fill: rgb(52, 104, 182); /*Das ist eine Art Variable, die man im Verlauf verwenden kann*/
+    --line-border-empty: #e0e0e0;
+
+}
+
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex; /*nebeneinander angeordnet*/
+    justify-content: space-between;
+    position: relative; /*Damit können wir die anderen Elemente absolut positionieren*/
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+.progress-container::before { /*Das ist der hintere graue Faden*/
+    content: ''; 
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); /*Das ist der Faden, der zwischen den Elementen verläuft*/
+    height: 3px;
+    width: 100%; /*Das soll ja schließlich den grauen Faden darstellen, der ja länger ist*/
+    z-index: -1; /*Damit wird das Element in den Hintergrund gesetzt*/
+    transition: 0.4s ease;
+}
+
+.progress { /*Das ist der blaue Faden*/
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); /*Das ist der Faden, der zwischen den Elementen verläuft*/
+    height: 3px;
+    width: 0%; /*Das ist der Startpunkt, also 0*/
+    z-index: -1; /*Damit wird das Element in den Hintergrund gesetzt*/
+    transition: 04.s ease;
+ }
+
+ .circle {
+     background-color:white;
+     color: rgb(37, 35, 35);
+     border-radius: 50%;
+     height: 30px;
+     width: 30px;
+     display: flex;
+     align-items: center;
+    justify-content: center;
+    border: 2px solid var(--line-border-empty);
+    transition: 0.4s ease
+ }
+
+ .circle.active {
+     border-color: var(--line-border-fill);     
+ }
+ 
+
+ .btn {
+     background-color: var(--line-border-fill);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer; /*Das musst du dir merken, wichtig!*/ 
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+ }
+
+ .btn:active {
+     transform: scale(0.95); /*Voll Geil, damit kann wird der Button beim Drücken kleiner oder größer*/
+ }
+
+.btn:focus {
+    outline: 0; 
+}
+.btn:disabled {
+    background: var(--line-border-empty);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="#">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            margin: 0;
+        }
+        
+        table {
+            width: 100%;
+            height: 75vh;
+            background-color: black;
+            color: rgb(235, 229, 229);
+            text-align: center;
+        }
+        
+        td {
+            width: 20%;
+            font-size: 24px;
+        }
+        
+        td:hover {
+            background-color: rgb(55, 55, 90);
+            cursor: pointer;
+        }
+        
+        #resultarea {
+            background-color: rgb(55, 55, 90);
+            height: 25vh;
+            font-size: 64px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="resultarea"></div>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td onclick="deleteLast()">DEL</td>
+        </tr>
+
+        <tr>
+            <td onclick="appendOperation(7)">
+                7</td>
+            <td onclick="appendOperation(8)">
+                8</td>
+            <td onclick="appendOperation(9)">
+                9</td>
+            <td onclick="appendOperation(` - `)">-</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(4)">
+                4</td>
+            <td onclick="appendOperation(5)">
+                5</td>
+            <td onclick="appendOperation(6)">
+                6</td>
+            <td onclick="appendOperation(` / `)">/</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(1)">
+                1</td>
+            <td onclick="appendOperation(2)">
+                2</td>
+            <td onclick="appendOperation(3)">
+                3</td>
+            <td onclick="appendOperation(` * `)">x</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td onclick="appendOperation(`.`)">,</td>
+            <td onclick="calculateResult()">=</td>
+            <td onclick="appendOperation(` + `)">+</td>
+        </tr>
+
+
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>

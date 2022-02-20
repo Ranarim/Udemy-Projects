@@ -1,0 +1,169 @@
+* {            /*Ein Sternchen ( * ) ist der Universalselektor für CSS. Es matcht ein einzelnes Element eines beliebigen Typs.*/
+    box-sizing: border-box; /*box-sizing legt fest, wie die Gesamtbreite und -höhe eines Elements berechnet wird.*/
+}
+
+body {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    margin: 0; /*Außenrand oder -abstand (margin) ist ein erzwungener Leerraum zwischen dem aktuellen Element und seinem Eltern- bzw. seinen Nachbarelementen.*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-mobile {
+background-color: white;
+width: 400px;
+box-shadow: 0 0 5px #3333335A;
+margin-top: 7rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header input {
+    background-color: beige;
+    border-radius: 3px;
+    border: none;
+    padding: 1rem;
+
+}
+
+header button {
+    background-color: transparent;
+    color:yellowgreen;
+    font-size: 2rem;
+    border: none;
+
+}
+
+.container-favorites {
+    padding: 0.2rem;
+    background-color:beige;
+    text-align: center;
+
+}
+
+.fav-meals {
+    background-color:none;
+    display: flex; /* bedeutet es steht nebeneinander */
+    padding: 0rem;
+
+}
+
+.fav-meals li {
+    list-style-type: none;
+    text-align: center;
+    font-weight:800
+
+}
+
+
+.fav-meals li img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.meals {
+    box-shadow: 0 0 5px #3333335A;
+    margin: 1.5rem;
+    border-radius: 3px;
+
+
+}
+.meal {
+
+}
+
+.meal-header {
+position: relative;
+}
+
+.meal-header .random {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    background-color: white;
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    padding: 0.3rem;
+    font-weight: 600;
+}
+
+.meal-header img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ordnet die Elemente entweder ganz rechts oder links */
+    padding: 1rem;
+}
+.meal-body .fav-btn {
+    padding: 0.5;
+    font-size: 1.5rem;
+    background-color: white;
+    border: none;
+    color:rgb(203, 214, 181);
+
+}
+.meal-body .fav-btn.active {
+    padding: 0.5;
+    font-size: 1.5rem;
+    background-color: white;
+    border: none;
+    color:yellowgreen;
+}
+.meal-body h4 {
+    font-family: Garamond;
+    font-weight: 800;
+    margin: 0%;
+}
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: relative;
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 600px;
+    width: 100%;
+}
+
+.popup .close-popup {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}

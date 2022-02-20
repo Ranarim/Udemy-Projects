@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang = "de">
+        <head>
+            <meta charset = "UTF-8">
+    	    <meta name="Mehrseillängen Kurs">
+		    <link rel ="stylesheet" href="style.css">
+            <script src = "main.js" defer></script>
+		    <title>Quiz</title>  
+
+        </head>
+
+        <body> 
+            <div class = "quiz-container" id="quiz">
+                <h2 id = "question" class ="quiz-header">Fragentext</h2>
+                <!-- Mit dem Befehl kannst du folgende li's erstellen, 
+                ohne alles manuell eingeben zu müssen: ul>li*4>input+label
+                Dann werden alle reihen ausgespuckt
+                input type = checkbox bedeutet, es entsteht ein Kästchen
+                mit einem Häkchen versehen werden
+                label steht dann für das Was nach dem Kästchen kommt-->
+                <ul>
+                    <li>
+                        <input type="radio" id="a" name = "Antwort" class = "answer">
+                        <label id="a_text" for="a">Frage</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="b" name = "Antwort" class = "answer">
+                        <label id="b_text" for="b">Frage</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="c" name = "Antwort" class = "answer">
+                        <label id="c_text" for="c">Frage</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="d" name = "Antwort" class = "answer">
+                        <label id="d_text" for="d">Frage</label>
+                    </li>
+                </ul>
+                <button id ="submit">Zur nächsten Frage</button>
+            </div>
+        </body>
+
+    </html>

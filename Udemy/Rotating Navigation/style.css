@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+ * {
+   box-sizing:border-box;  /* Wenn wir das Padding ändern, wird die Breite nicht geänder*/
+}
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #333;
+   overflow-x: hidden; /*Damit versteckt es die Rollleiste auf der X Achse*/
+   margin: 0;
+}
+
+
+.container {
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    position:fixed;
+    top: -100px; /*Da wir den Kreis genau zur Hälfte abgeschnitten wollen muss der Wert negativ sein*/
+    left:-100px;
+}
+
+.circle {
+    background-color: #eb7956;
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}
+
+.circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+
+.circle button:focus { /*Steht für Target Focus*/ 
+    outline: none;
+}
+
+.circle button#open { /*Damit ist ID Open definiert*/ 
+    left: 60%;
+}
+
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    text-transform:uppercase;
+    color: white;
+    margin: 40px 0;
+    transform: translateX(-100%); /*Wir wollen schließlich, dass es erstmal abgeschnitten ist*/
+    transition: transform 0.4s ease-in;
+}
+
+nav ul li i { /*Damit wird das Symbol geändert*/
+    font-size: 20px;
+    margin-right: 10px;
+    transform: translateX(-150%); /*Wir wollen schließlich, dass es erstmal abgeschnitten ist*/
+}
+
+nav ul li + li { /*Damit ist nur das zweite li gemeint*/
+    margin-left: 15px;
+    transform: translateX(-200%); /*Wir wollen schließlich, dass es erstmal abgeschnitten ist*/
+
+}
+
+nav ul li + li + li { /*Damit ist nur das dritte li gemeint*/
+    margin-left: 30px;
+}
+
+.content img{ 
+    max-width: 100%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1 {
+    margin: 0;
+}
+
+.content small {
+font-style: italic;
+}
+
+.content p {
+    line-height: 1.5;
+}

@@ -1,0 +1,22 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 525px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(110, 155, 240);
+    margin: 10px;
+    font: bold 100px Arial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

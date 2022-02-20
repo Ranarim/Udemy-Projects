@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(156, 226, 226);
+    font-family: Garamond, sans-serif, serif;
+    margin: 0;
+}
+.notes {
+    background-color: white;
+    margin: 20px;
+    width: 400px;
+    height: 400px;
+
+}
+
+.notes .tools {
+    background-color: rgb(235, 235, 168);
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+
+}
+.notes .tools button { /* der Punkt kommt nur vor dem Wort, wenn es sich um eine Klasse oder eine ID handelt*/
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+
+}
+.notes .main {
+    height: 100%;
+    width: 100%;
+}
+
+.notes textarea {
+    outline: none;
+    font-family: inherit;
+    border: none;
+    height: 100%;
+    width: 99%;
+}
+
+.notes .hidden {
+    display: none;
+}

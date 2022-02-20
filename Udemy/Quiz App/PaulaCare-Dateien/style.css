@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap');
+* { 
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+li, a, button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #24252a;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /*Das bewegt die Items in unterschiedliche Ecken*/
+  align-items: center;
+  padding: 10px 10%;
+}
+
+.logo {
+  cursor: pointer;
+  width: 130px;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block; /*Jetzt sind se nebeneinander*/
+  padding: 0 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s; /*Dauert 0.3 Sekunden ohne Verzögerung*/
+}
+
+.nav_links li a:hover {
+color: rgb(14, 22, 143);
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgb(14, 22, 143);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgb(14, 22, 143, 0.8);
+}
+
+.bild1 {
+  width: 60vw;
+  position: absolute;
+  left: 40%;
+}
+
+.block1 {
+  width: 50%;
+  padding: 50px;
+  margin-left: 50px;
+  font-family: "Montserrat", sans-serif;
+  align-items: left;
+  font-size: 19px;
+}
+
+h1 {
+  padding: 10px;
+}
+
+h2 {
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.block2 {
+  position: absolute;
+  top: 170vh;
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  font-size: 19px;
+  border: 1px solid;
+}
+
+.profile1 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+.profile2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: green;
+}
+.profile3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: blue;
+}
+.profile3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+

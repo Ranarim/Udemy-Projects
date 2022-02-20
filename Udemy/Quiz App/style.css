@@ -1,0 +1,62 @@
+body {
+    background-image: url(hintergrund.jpg); 
+    font-family: sans-serif;
+    margin: 0;
+    display: flex; /* Anordnung ist organisiert */
+    align-items: center;
+    justify-content: center;
+    min-height: 40rem; /* Damit wird die */
+
+
+
+}
+
+.quiz-container {
+border-radius: 1rem;
+background-color: white;
+padding: 0em;
+box-shadow: none;
+width: 600px;
+max-width: 100%;
+
+
+}
+
+.quiz-header {
+text-align: center;
+margin-top: 2rem;
+}
+
+ul {
+list-style-type: none;
+margin-left: 0.5rem;
+}
+
+li {
+    padding: 0.5rem;
+}
+
+ul li label {
+    cursor: pointer;
+}
+button {
+    color: none;
+    display: block;
+    width: 100%;
+    padding: 0;
+    font-family: inherit;
+    height: 4rem;
+    background-color: rgb(169, 177, 158);
+    font-size: 1.5rem;
+    padding: none;
+    text-align: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: rgb(136, 145, 124);
+}
+h2 { 
+    text-align: center;
+    padding: 2rem;;
+}

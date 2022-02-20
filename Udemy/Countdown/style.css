@@ -1,0 +1,68 @@
+* { 
+box-sizing: border-box; /*  */ 
+}
+
+body {
+    background-image: url("Hochkalter.jpg");
+    background-size: cover;
+    background-position: top;
+    display: flex; /* positioniert Blöcke intuitiv */
+    flex-direction: column; /* richtet gleich hohe Blöcke ein */ 
+    align-items: center; /* Die Eigenschaft align-items legt fest, wie die einzelnen 
+    flexiblen Elemente entlang der Querachse angeordnet werden */
+    font-family: "oppins", sans-serif;
+    
+
+}
+
+h1 {
+    font-size: 5rem; /* rem-Wert am Root-Element orientiert (also an der Schriftgröße, für body bzw. html*/
+    color: black;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media screen and (max-width: 64em) {
+    h1 {
+        font-size: 2.5em;
+        padding: 2rem;
+
+      }
+    }
+    
+@media screen and (max-width: 50em) {
+    h1 {
+        font-size: 2em;
+        padding: 2rem;
+
+      }
+    }
+    
+    @media screen and (max-width: 30em){
+    h1 {
+        font-size: 1.5em;
+        padding: 2rem;
+      }
+
+    }
+.container {
+    margin-top: -2rem;
+    display: flex;
+    color:black;
+    flex-wrap: wrap; /* Das ist Teil des responsive Designs */
+    justify-content: center;
+
+}
+
+.big_text {
+    font-size: 6rem;
+    margin: 0 2rem; /* Die erste 0 ist der Abstand nach oben */
+}
+
+.container_el {
+    text-align: center; /* Damit wird span also der Text in die Mitte gesetzt */
+}
+
+span {
+    font-size: 1.5rem;
+}

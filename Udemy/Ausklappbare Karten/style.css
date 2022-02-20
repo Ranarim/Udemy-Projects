@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+* {
+    box-sizing:border-box;  /* Wenn wir das Padding ändern, wird die Breite nicht geänder, es bleibt immer eine Box*/
+}
+
+body {
+    font-family: 'Roboto';
+    display: flex; /*Damit wird alles in einer Reihe geordnet*/
+    align-items: center; /*Damit werden alle in der Mitte angeordnet*/
+    justify-content: center; 
+    height: 100vh; /* Damit  bezieht sich das justify content nicht nur auf die Horizontale, sondern auch auf vertikale Ebene*/
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: none;
+    height: 80vw;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    flex: 0.5;
+    margin: 10px;
+    position: relative; /*Ich mag die Überschriften immer in dem Element haben*/
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 4px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1; /*Damit kann man die Überschrift sehen, falls es aktiv ist*/
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),  
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
